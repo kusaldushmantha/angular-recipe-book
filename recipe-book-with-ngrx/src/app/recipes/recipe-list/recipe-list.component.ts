@@ -22,12 +22,12 @@ export class RecipeListComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        this.recipeChangedSubscription = this.store.select( 'recipes' )
-            .pipe(
-                map( recipesSate => recipesSate.recipes ) )
-            .subscribe( ( recipes: Recipe[] ) => {
-                this.recipes = recipes;
-            } );
+this.recipeChangedSubscription = this.store.select( 'recipes' )
+    .pipe(
+        map( recipesSate => recipesSate.recipes ) )
+    .subscribe( ( recipes: Recipe[] ) => {
+        this.recipes = recipes;
+    } );
     }
 
     onNewRecipe() {
